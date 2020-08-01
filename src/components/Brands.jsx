@@ -1,23 +1,23 @@
 import React, {Component} from 'react';
-import VisibilitySensor from 'react-visibility-sensor';
+import BrandImage from './BrandImage';
 
 function Brands(){
     return (<section id="brands">
-              <VisibilitySensor >
-              {({isVisible}) => {
-                return (
-                  <div>
-                    <h2 className="text-body">Temos carros das melhores marcas no mercado</h2>
-                      <div>
-                        <img src="img/ferrari.png" className="logo-car" alt="ferrari" style={{opacity: isVisible? 1 : 0}}/>
-                        <img src="img/porsche.png" className="logo-car" alt="porsche" style={{opacity: isVisible? 1 : 0}}/>
-                        <img src="img/bmw.png" className="logo-car" alt="bmw" style={{opacity: isVisible? 1 : 0}}/>
-                        <img src="img/tesla.png" className="logo-car" alt="tesla" style={{opacity: isVisible? 1 : 0}}/>
-                      </div>
-                  </div>
-                );
-              }}
-              </ VisibilitySensor>
+              <h2 className="text-body">Temos carros das melhores marcas no mercado</h2>
+              <div className="row">
+                <div className="col-lg-3">
+                  < BrandImage src="img/ferrari.png" alt="ferrari"/>
+                </div>
+                <div className="col-lg-3">
+                  < BrandImage src="img/porsche.png" alt="porsche"/>
+                </div>
+                <div className="col-lg-3">
+                  < BrandImage src="img/bmw.png" alt="bmw"/>
+                </div>
+                <div className="col-lg-3">
+                  < BrandImage src="img/tesla.png" alt="tesla"/>
+                </div>
+              </div>
             </section>);
 }
 
